@@ -19,10 +19,10 @@ public class WebdriverScope {
 		driver.get("https://www.marriott.com/default.mi");
 		System.out.println(driver.findElements(By.tagName("a")).size());
 
-		WebElement miniDriver = driver.findElement(By.cssSelector("div[class='row accordian-responsive']"));
+		WebElement miniDriver = driver.findElement(By.cssSelector("span[class='AccordionContainerstyles__StyledAccordionContainer-sc-1pcmkl8-0 fyUcWP col-12 d-flex']"));
 		System.out.println(miniDriver.findElements(By.tagName("a")).size());
 
-		WebElement colDriver = miniDriver.findElement(By.xpath("//div/div/div/div/div/a/following-sibling::ul"));
+		WebElement colDriver = miniDriver.findElement(By.xpath("//div[@class='Accordionstyles__StyledAccordion-sc-15j3t18-0 kjSphE isAccHiddenTab col-12 col-md-4 acc'][1]"));
 		System.out.println(colDriver.findElements(By.tagName("a")).size());
 
 		for (int i = 0; i < colDriver.findElements(By.tagName("a")).size(); i++) {
